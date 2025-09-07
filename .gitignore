@@ -1,0 +1,18 @@
+# Ignore private keys
+keys/*_private.pem
+receiver_private.pem
+sender_private.pem
+
+# Python cache files
+*.pyc
+__pycache__/
+
+# VS Code settings
+.vscode/
+
+# Environment variables
+.env
+
+# Encrypted/decrypted temporary files
+decrypted_*
+*.bin
