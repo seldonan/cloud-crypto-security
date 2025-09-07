@@ -11,20 +11,29 @@ This project demonstrates a complete workflow:
 ---
 
 ## Project Structure
+
 cloud-crypto-security/
 ├── test_files/
-│ ├── sample.txt # Input file for testing
-│ ├── downloaded_sample.txt # Encrypted file from S3
-│ ├── downloaded_aes_key.bin # AES key from S3 (encrypted with RSA)
-│ ├── original_sample.txt # Final decrypted file
-│ └── test_read.py # Utility script for file debugging
-├── main.py # Core encryption/decryption + S3 code
-├── .env # AWS credentials (not committed to Git)
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
+│ ├── sample.txt
+│ ├── downloaded_sample.txt
+│ ├── downloaded_aes_key.bin
+│ ├── original_sample.txt
+│ └── test_read.py
+├── venv/
+├── main.py
+├── .env
+├── .gitignore
+└── README.md
 
 ---
+
+## Tech Stack Used
+- **Python**  
+  - cryptography  
+  - boto3  
+  - python-dotenv  
+- **AWS S3** (for file storage)
+
 
 ##  Features
 - AES-256 file encryption (CBC mode with padding).
@@ -37,35 +46,34 @@ cloud-crypto-security/
 
 ##  Installation & Setup
 
-1.Clone this repository:
+
 ```bash
+Clone this repository:
 git clone <repo-link>
 cd cloud-crypto-security
 
 
-2.Create and activate a virtual environment:
+Create and activate a virtual environment:
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # Linux/Mac
 source venv/bin/activate
 
-3.Install dependencies:
+Install dependencies:
 pip install -r requirements.txt
 
 
-4.Environment Variables
+Environment Variables
 Create a .env file in the root directory:
 AWS_DEFAULT_REGION=ap-south-1
 secret_bucket=your-s3-bucket-name
 
 
-5.Make sure your AWS credentials are configured via AWS CLI:
+Make sure your AWS credentials are configured via AWS CLI:
 aws configure
 
-Tech Stack used 
-Python (cryptography, boto3, python-dotenv)
-AWS S3 (file storage)
+
 
 
 
